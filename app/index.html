@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Coast Cover Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">NEON COAST <span>COVER STUDIO</span></div>
+  <div class="tagline">Turn any photo into sunset-drenched cover art. Offline, on your machine.</div>
+</header>
+<main id="editor">
+  <section id="stageWrap">
+    <canvas id="stage" width="620" height="620"></canvas>
+    <p class="hint">Click a panel to select it, drag to reposition its picture.</p>
+  </section>
+  <aside id="controls">
+    <label class="fileBtn">Add your photos (up to 9)
+      <input id="photoInput" type="file" accept="image/*" multiple>
+    </label>
+    <label>Title <input id="titleInput" type="text" maxlength="24"></label>
+    <label>Subtitle <input id="subtitleInput" type="text" maxlength="30"></label>
+    <label>Ribbon <input id="ribbonInput" type="text" maxlength="48"></label>
+    <label>Badge <input id="badgeInput" type="text" maxlength="3"></label>
+    <h3>Layout</h3>
+    <div id="layoutPick" class="btnRow"></div>
+    <h3>Colour grade</h3>
+    <div id="gradePick" class="btnRow"></div>
+    <h3>Panel</h3>
+    <div id="panelPick" class="btnRow"></div>
+    <label>Panel picture
+      <select id="sourcePick"></select>
+    </label>
+    <label>Zoom <input id="zoomRange" type="range" min="1" max="2.6" step="0.01" value="1"></label>
+    <label>Heat stars <input id="starsRange" type="range" min="0" max="5" step="1" value="5"></label>
+    <label class="check"><input id="halftoneToggle" type="checkbox" checked> Halftone title dots</label>
+    <h3>Export size</h3>
+    <select id="sizePick">
+      <option value="square">Square 1080×1080</option>
+      <option value="portrait">Portrait 1080×1350</option>
+      <option value="wide">Wide 1920×1080</option>
+      <option value="story">Story 1080×1920</option>
+    </select>
+    <div class="btnRow">
+      <button id="undoBtn" type="button">Undo</button>
+      <button id="redoBtn" type="button">Redo</button>
+    </div>
+    <div class="btnRow">
+      <button id="exportBtn" type="button" class="primary">Export PNG</button>
+      <button id="exportAllBtn" type="button">Export all sizes</button>
+    </div>
+  </aside>
+</main>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

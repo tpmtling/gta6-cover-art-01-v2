@@ -1,0 +1,98 @@
+/* Neon Coast Cover Studio editor styling: dark neon room around the art. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, #3b115f 0%, #12082b 55%, #08041a 100%);
+  color: #f4efff;
+}
+#topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 16px 24px 6px;
+}
+.brand {
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background: linear-gradient(180deg, #fff7ae, #ffb347 45%, #ff5e7a 75%, #ff2e88);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand span { font-size: 17px; letter-spacing: 4px; }
+.tagline { color: #b9a8e8; font-size: 14px; }
+#editor {
+  display: flex;
+  gap: 22px;
+  padding: 14px 24px 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#stageWrap { text-align: center; }
+#stage {
+  border: 3px solid #2c1a56;
+  border-radius: 10px;
+  box-shadow: 0 18px 50px rgba(255, 46, 136, 0.25), 0 6px 22px rgba(0, 0, 0, 0.6);
+  background: #0b0620;
+  touch-action: none;
+  cursor: grab;
+}
+.hint { color: #8f7fc4; font-size: 13px; }
+#controls {
+  width: 330px;
+  background: rgba(24, 12, 52, 0.85);
+  border: 1px solid #3a2270;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+#controls h3 {
+  margin: 8px 0 2px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #37f4e4;
+}
+#controls label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #d9ccff; }
+#controls label.check { flex-direction: row; align-items: center; gap: 8px; }
+#controls input[type="text"], #controls select {
+  background: #0d0724;
+  border: 1px solid #4a2f8f;
+  border-radius: 7px;
+  color: #fff;
+  padding: 7px 9px;
+  font-size: 14px;
+}
+#controls input[type="range"] { accent-color: #ff2e88; }
+.fileBtn {
+  background: linear-gradient(90deg, #ff5e7a, #ff2e88);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff !important;
+}
+.fileBtn input { display: none; }
+.btnRow { display: flex; flex-wrap: wrap; gap: 6px; }
+.btnRow button {
+  background: #1c0f42;
+  color: #d9ccff;
+  border: 1px solid #4a2f8f;
+  border-radius: 999px;
+  padding: 6px 11px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.btnRow button.on { background: #ff2e88; border-color: #ff2e88; color: #fff; font-weight: 700; }
+.btnRow button.primary { background: #ffb347; border-color: #ffb347; color: #2b1503; font-weight: 800; }
+body.shot-cover { background: #0b0620; }
+body.shot-cover #topbar, body.shot-cover #controls, body.shot-cover .hint { display: none; }
+body.shot-cover #editor { padding: 0; gap: 0; }
+body.shot-cover #stage { border: none; border-radius: 0; box-shadow: none; display: block; }
+body.shot-cover #stageWrap { margin: 0; padding: 0; }
+body.shot-editor #editor { flex-wrap: nowrap; }
